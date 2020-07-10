@@ -1,0 +1,55 @@
+baseURL = "https://www.aacontainersales.com/"
+languageCode = "en-us"
+title = "AA Container Sales, Inc: Sell, lease, transport, repair & modify shipping containers"
+theme = "aacontainersales"
+publishDir = "docs"
+
+[params]
+  author = "Taylor Brink <taylor@nanobasis.com>"
+  googleVerification = "xLT2p6pWgbmo9GEAd72tKXT5O5IyhO_vVmzVgDibp30"
+  header = "AA Container Sales, Inc."
+  subheader = "Sell, lease, transport, repair & modify shipping containers"
+  description = "Over 30 years experience - Sell, lease, transport, repair & modify shipping containers located in North Minneapolis, Minnesota"
+  keywords = "container,cargo,shipping,steel,watertight,theft-proof,impregnable,manufacturing,storage,construction,materials,tools,shop,equipment,inventory,shopping,marina,trailer,hardware,lumber,explosive,vented,wind,water,warehouse,20,40,unit,secure,lockable,access"
+  css = [ ]
+  js = [ "/js/contact-form.js?1500337527" ]
+  
+[[menu.main]]
+  url = "/"
+  name = "Home"
+  weight = 1
+
+[[menu.main]]
+  url = "/pages/our-containers/"
+  name = "Our Containers"
+  weight = 2
+
+[[menu.main]]
+  url = "/pages/contact-feedback/"
+  name = "Contact Us"
+  weight = 3
+
+[[menu.submenu]]
+  url = "/pages/20ft-container-units/"
+  name = "20ft. Container Units"
+  weight = 1
+
+[[menu.submenu]]
+  url = "/pages/40ft-container-units/"
+  name = "40ft. Container Units"
+  weight = 2
+
+[[menu.submenu]]
+  url = "/pages/modified-container-units/"
+  name = "Modified Container Units"
+  weight = 3
+
+[[menu.submenu]]
+  url = "/pages/specialty-container-units/"
+  name = "Specialty Container Units"
+  weight = 4
+
+[[menu.submenu]]
+  url = "/pages/container-unit-modifications/"
+  name = "Container Unit Modifications"
+  weight = 5

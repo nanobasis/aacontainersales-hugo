@@ -1,0 +1,8 @@
+{{ partial "header" . }}
+
+<main>
+  {{ partial "single" . }}
+  {{ if in .Title "Contact Us" }}{{ partial "contact-form" }}{{ end }}
+</main>
+
+{{ partial "footer" . }}

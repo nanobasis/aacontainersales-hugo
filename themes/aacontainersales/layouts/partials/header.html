@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+
+    <meta name="description" content="{{ .Description | default .Site.Params.Description }}" />
+    <meta name="keywords" content="{{ .Site.Params.Keywords }}" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="author" {{ printf "content=%q" .Site.Params.Author | safeHTMLAttr }} />
+    <meta name="google-site-verification" {{ printf "content=%q" .Site.Params.GoogleVerification | safeHTMLAttr }} />
+
+    {{ partial "css" . }}
+    {{ partial "js" . }}
+  </head>
+  <body>
+  <div id="container">
+    <div id="header">
+      <h1>{{ .Site.Params.Header }}</h1>
+      <h2>{{ .Site.Params.Subheader }}</h2>
+      <img id="logo" alt="AA Container Sales, Inc." height="160" width="162" src="/images/logo160.png" />
+      <img id="logoContainer" alt="Steel Shipping Container for Sale, Lease" src="/images/logo220.png" />
+    </div>
+
+    {{ if .Site.Menus.main }}
+      <div id="nav">
+        <div class="pure-menu">
+          <ul class="pure-menu-list">
+            {{ range .Site.Menus.main }}
+              <li class="pure-menu-item">
+                <a class="pure-menu-link" href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    {{ end }}
+
+    {{ if .Site.Menus.submenu }}
+      <div id="subnav">
+        <div class="navhead">Browse</div>
+        <div class="mar-t10">
+          {{ range .Site.Menus.submenu }}
+            <div class="mar-t5"><a href="{{ .URL }}">{{ .Name }}</a></div>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+
+    <div id="main">
